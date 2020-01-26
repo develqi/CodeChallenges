@@ -19,9 +19,14 @@ namespace SortDates
             output => ["15 Jan 1988", "03 Feb 2017", "01 Mar 2017"]
         */
 
-        public static string[] SortDates(string[] dates)
+        public static string[] SortDatesMethod01(string[] dates)
         {
-            var months = new [] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
+            return dates.OrderBy(date => DateTime.Parse(date)).ToArray();
+        }
+
+        public static string[] SortDatesMethod02(string[] dates)
+        {
+            var months = new [] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
 
             return dates
                 .Select(date => new
@@ -46,7 +51,8 @@ namespace SortDates
                 "15 Jan 1988"
             };
 
-            SortDates(dates).ToList().ForEach(date => Console.WriteLine(date));
+            Console.WriteLine($"[{string.Join(",", SortDatesMethod01(dates))}] => Method01");
+            Console.WriteLine($"[{string.Join(",", SortDatesMethod02(dates))}] => Method02");
 
             Console.ReadLine();
         }
