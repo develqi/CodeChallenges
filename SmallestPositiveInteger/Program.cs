@@ -56,7 +56,7 @@ namespace SmallestPositiveInteger
         {
             var result = 1;
 
-            for (int i = 1; i <= 100000; i++)
+            for (int i = 1; i <= 100001; i++)
             {
                 if(Array.IndexOf(array, i) == -1)
                 {
@@ -74,7 +74,7 @@ namespace SmallestPositiveInteger
 
             Array.Sort(array);
 
-            for (int i = 1; i <= 100000; i++)
+            for (int i = 1; i <= 100001; i++)
             {
                 if (Array.BinarySearch(array, i) < 0)
                 {
