@@ -35,21 +35,48 @@ namespace SmallestPositiveInteger
             var array03 = new[] { -1, -3 }; // 1
             var array04 = new[] { 1 }; // 2
 
-            Console.WriteLine($"Result: {Solotion(array01)}");
-            Console.WriteLine($"Result: {Solotion(array02)}");
-            Console.WriteLine($"Result: {Solotion(array03)}");
-            Console.WriteLine($"Result: {Solotion(array04)}");
+            Console.WriteLine("< ---------- Solotion01 ----------");
+
+            Console.WriteLine($"Result: {Solotion01(array01)}");
+            Console.WriteLine($"Result: {Solotion01(array02)}");
+            Console.WriteLine($"Result: {Solotion01(array03)}");
+            Console.WriteLine($"Result: {Solotion01(array04)}");
+
+            Console.WriteLine("< ---------- Solotion01 Best Performance ----------");
+
+            Console.WriteLine($"Result: {Solotion02(array01)}");
+            Console.WriteLine($"Result: {Solotion02(array02)}");
+            Console.WriteLine($"Result: {Solotion02(array03)}");
+            Console.WriteLine($"Result: {Solotion02(array04)}");
 
             Console.ReadLine();
         }
 
-        static int Solotion(int[] array)
+        static int Solotion01(int[] array)
         {
-            var result = 0;
+            var result = 1;
 
-            for (int i = 1; i <= 1000000; i++)
+            for (int i = 1; i <= 100000; i++)
             {
-                if (Array.IndexOf(array, i) == -1)
+                if(Array.IndexOf(array, i) == -1)
+                {
+                    result = i;
+                    break;
+                }
+            }
+
+            return result;
+        }
+
+        static int Solotion02(int[] array)
+        {
+            var result = 1;
+
+            Array.Sort(array);
+
+            for (int i = 1; i <= 100000; i++)
+            {
+                if (Array.BinarySearch(array, i) < 0)
                 {
                     result = i;
                     break;
