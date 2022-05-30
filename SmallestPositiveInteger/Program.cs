@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SmallestPositiveInteger
 {
@@ -84,6 +85,39 @@ namespace SmallestPositiveInteger
             }
 
             return result;
+        }
+
+        static int Solution03(int[] array)
+        {
+            var dic = new Dictionary<int, int>(array.Length);
+
+            foreach (var item in array)
+            {
+                if (item > 0)
+                {
+                    if (!dic.ContainsKey(item))
+                    {
+                        dic.Add(item, item);
+                    }
+                }
+            }
+
+            int i;
+            
+            for (i = 0; i < dic.Count; i++)
+            {
+                if (!dic.ContainsKey(i + 1))
+                {
+                    return i + 1;
+                }
+            }
+
+            if (i != 0)
+            {
+                return i + 1;
+            }
+
+            return 1;
         }
     }
 }
