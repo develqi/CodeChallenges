@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29613.14
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortDates", "SortDates\SortDates.csproj", "{A65E57BD-CD40-47DF-A177-80E1B8908300}"
 EndProject
@@ -13,9 +13,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReverseWords02", "ReverseWo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArrayCompair01", "ArrayCompair01\ArrayCompair01.csproj", "{761336B4-FA71-4CC6-8ED0-FA78A69BC875}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmallestPositiveInteger", "SmallestPositiveInteger\SmallestPositiveInteger.csproj", "{B6072CF9-AC5E-4C65-AD58-C1A6F736AC3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmallestPositiveInteger", "SmallestPositiveInteger\SmallestPositiveInteger.csproj", "{B6072CF9-AC5E-4C65-AD58-C1A6F736AC3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewTest", "NewTest\NewTest.csproj", "{BBAD3ED7-A62E-45AC-ACE8-823DE70E40D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewTest", "NewTest\NewTest.csproj", "{BBAD3ED7-A62E-45AC-ACE8-823DE70E40D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CurrencyConverter", "CurrencyConverter", "{B4F78722-32C2-4C55-826C-DF464BD167EA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyConverter.Domain", "CurrencyConverter\CurrencyConverter.Domain\CurrencyConverter.Domain.csproj", "{EAF70BD5-6A0F-4284-B4AD-F8018A2FA987}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyConverter.UnitTests", "CurrencyConverter\CurrencyConverter.UnitTests\CurrencyConverter.UnitTests.csproj", "{3C8FA9B8-7C1F-40BD-BD71-2C89B1251681}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,9 +57,21 @@ Global
 		{BBAD3ED7-A62E-45AC-ACE8-823DE70E40D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBAD3ED7-A62E-45AC-ACE8-823DE70E40D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBAD3ED7-A62E-45AC-ACE8-823DE70E40D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAF70BD5-6A0F-4284-B4AD-F8018A2FA987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAF70BD5-6A0F-4284-B4AD-F8018A2FA987}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAF70BD5-6A0F-4284-B4AD-F8018A2FA987}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAF70BD5-6A0F-4284-B4AD-F8018A2FA987}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C8FA9B8-7C1F-40BD-BD71-2C89B1251681}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C8FA9B8-7C1F-40BD-BD71-2C89B1251681}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C8FA9B8-7C1F-40BD-BD71-2C89B1251681}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C8FA9B8-7C1F-40BD-BD71-2C89B1251681}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EAF70BD5-6A0F-4284-B4AD-F8018A2FA987} = {B4F78722-32C2-4C55-826C-DF464BD167EA}
+		{3C8FA9B8-7C1F-40BD-BD71-2C89B1251681} = {B4F78722-32C2-4C55-826C-DF464BD167EA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9C8B7FE1-3ACD-4FE5-AC12-C3CE4CCE731C}
